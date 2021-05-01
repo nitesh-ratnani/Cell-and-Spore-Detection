@@ -13,7 +13,7 @@ img = cv2.imread('Image_786.jpg')  #Only change name of image to use
 img=cv2.resize(img,None,fx=0.4,fy=0.4)
 height, width, channels = img.shape
 
-# Object detection
+# Cell/Spore detection
 blob = cv2.dnn.blobFromImage(img, 1 / 255, (416, 416), (0, 0, 0), swapRB=True, crop=False)
 
 net.setInput(blob)
